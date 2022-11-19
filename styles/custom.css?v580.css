@@ -68,7 +68,8 @@ h1 {
 	display: none;
 }
 
-#resolve_btn {
+#Submit {
 	border-top-left-radius: 0px;
 	border-bottom-left-radius: 0px;
+    color: white;
 }

