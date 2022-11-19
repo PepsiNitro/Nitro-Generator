@@ -2,9 +2,14 @@
 .alert {
     padding: 20px;
     background-color: #f44336;
-    color: white;
+    color: darkred;
     margin-bottom: 15px;
-    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+
   }
   
   /* The close button */
