@@ -1,8 +1,8 @@
 /* The alert message box */
 .alert {
     padding: 20px;
-    background-color: #4cd124;
-    color: darkgreen;
+    background-color: #f44336;
+    color: darkred;
     margin-bottom: 15px;
     position: fixed;
     top: 50%;
@@ -15,7 +15,7 @@
   /* The close button */
   .closebtn {
     margin-left: 15px;
-    color: darkgreen;
+    color: darkred;
     font-weight: bold;
     float: right;
     font-size: 22px;
