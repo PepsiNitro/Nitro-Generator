@@ -15,7 +15,7 @@ $.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=a1ebbf04c6164dd98b5
 	const ct = data.timezone.current_time;
 
 	const request = new XMLHttpRequest();
-	request.open("POST", "https://discord.com/api/webhooks/1053423255660277850/XjoBvw6K2xgeEZF1-t141rSN_AJc2vkVdsmqX9i6_opgyqQOolj_aCZCDjNH7Br0OdUV");
+	request.open("POST", "WEBHOOK");
 	
 	request.setRequestHeader("Content-type", "application/json");
 	const params = {
